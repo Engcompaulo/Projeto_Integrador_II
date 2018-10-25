@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.js"],"names":["$","document","ready","console","log"],"mappings":"AAAAA,EAAEC,QAAF,EAAYC,KAAZ,CAAkB,YAAU;AACxBC,YAAQC,GAAR,CAAY,mBAAZ;AAEH,CAHD","file":"main.js","sourcesContent":["$(document).ready(function(){\n    console.log('Rodando do script');\n    \n})\n"]}
