@@ -52,7 +52,8 @@ logOutButton.addEventListener('click', function () {
         .auth()
         .signOut()
         .then(function () {
-            displayName.innerText = 'Você não está autenticado';
+            //displayName.innerText = 'Você não está autenticado';
+            window.location('../../index.html')
             alert('Você se deslogou');
         }, function (error) {
             console.error(error);
@@ -97,9 +98,12 @@ function signIn(provider) {
         .then(function (result) {
             console.log(result);
             var token = result.credential.accessToken;
+            //displayName.innerText = 'Bem vindo, ' + result.user.displayName;
+            window.location = '../paulo/poslogin.html';
             displayName.innerText = 'Bem vindo, ' + result.user.displayName;
         }).catch(function (error) {
             console.log(error);
             alert('Falha na autenticação');
         });
 }
+
