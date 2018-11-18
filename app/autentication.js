@@ -53,8 +53,10 @@ logOutButton.addEventListener('click', function () {
         .signOut()
         .then(function () {
             //displayName.innerText = 'Você não está autenticado';
-            window.location('../../index.html')
+            //window.location('/index.html')
             alert('Você se deslogou');
+            //window.location('/index.html');
+            document.location.href = 'index.html'
         }, function (error) {
             console.error(error);
         });
@@ -99,8 +101,10 @@ function signIn(provider) {
             console.log(result);
             var token = result.credential.accessToken;
             //displayName.innerText = 'Bem vindo, ' + result.user.displayName;
-            window.location = '../paulo/poslogin.html';
-            displayName.innerText = 'Bem vindo, ' + result.user.displayName;
+           // window.location = 'poslogin.html';
+            //displayName.innerText = 'Bem vindo, ' + result.user.displayName;
+            alert("Seja bem vindo: "+ result.user.displayName);
+            window.location = 'poslogin.html';
         }).catch(function (error) {
             console.log(error);
             alert('Falha na autenticação');
