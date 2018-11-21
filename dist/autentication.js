@@ -35,8 +35,9 @@ authEmailPassButton.addEventListener('click', function () {
         .signInWithEmailAndPassword(emailInput.value, passwordInput.value)
         .then(function (result) {
             console.log(result);
-            displayName.innerText = 'Bem vindo, ' + emailInput.value;
+            
             alert('Autenticado ' + emailInput.value);
+            window.location = 'poslogin.html';
             
         })
         .catch(function (error) {
